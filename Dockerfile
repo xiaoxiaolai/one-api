@@ -11,7 +11,8 @@ FROM golang AS builder2
 
 ENV GO111MODULE=on \
     CGO_ENABLED=1 \
-    GOOS=linux
+    GOOS=linux \
+    GOPROXY=https://goproxy.io,direct
 
 WORKDIR /build
 ADD go.mod go.sum ./
